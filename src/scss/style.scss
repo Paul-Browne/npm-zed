@@ -1,0 +1,25 @@
+@import "./private/normalize.scss";
+@import "./private/header.scss";
+@import "./private/footer.scss";
+
+// globals
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  min-height: calc(100vh);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+@import "./private/index.scss";

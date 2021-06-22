@@ -1,0 +1,36 @@
+@import "./variables.scss";
+
+main.home {
+  @include container;
+  padding-left: unit(2);
+  padding-right: unit(2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1,
+  h2 {
+    text-align: center;
+    margin: 0 0 unit(2) 0;
+  }
+  .logo {
+    width: 180px;
+    margin: 0 0 unit(2) 0;
+  }
+  .cards {
+    display: flex;
+    justify-content: center;
+    .card {
+      flex: 0 1 250px;
+      margin: unit(2);
+      border: 1px solid #aaa;
+      border-radius: unit(1);
+      overflow: hidden;
+      text-decoration: none;
+      color: #333;
+      text-align: center;
+      h3 {
+        padding: 0 unit(2);
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+@import "./variables.scss";
+
+#header {
+  border-bottom: 1px solid $colorGrayDark;
+  nav {
+    display: flex;
+    align-items: center;
+    padding: unit(1);
+    @include container;
+  }
+
+  img {
+    height: unit(4);
+    padding: unit(0.25) 0;
+    @media (min-width: 600px) {
+      height: unit(5);
+      padding: unit(0.5) 0;
+    }
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0 0 0 auto;
+    li {
+      position: relative;
+      padding: unit(1);
+      a {
+        padding: unit(1);
+        color: $mainTextColor;
+        text-decoration: none;
+        font-weight: bold;
+      }
+    }
+  }
+
+  label {
+    display: none;
+    cursor: pointer;
+    padding: 5px;
+    &:before {
+      content: "";
+      width: 25px;
+      height: 22px;
+      border: 0;
+      background-image: url("data:image/svg+xml,%3Csvg fill='none' width='25' height='22' viewBox='0 0 25 22' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000'%3E%3Cpath d='m0 0h25v4h-25z'/%3E%3Cpath d='m0 9h25v4h-25z'/%3E%3Cpath d='m0 18h25v4h-25z'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  [type="checkbox"] {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+  }
+
+  :checked + label:before {
+    background-image: url("data:image/svg+xml,%3Csvg width='21' height='22' viewBox='0 0 21 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='3.07422' y='0.74707' width='25' height='4' transform='rotate(45 3.07422 0.74707)' fill='%23000000'/%3E%3Crect x='0.246094' y='18.4248' width='25' height='4' transform='rotate(-45 0.246094 18.4248)' fill='%23000000'/%3E%3C/svg%3E%0A");
+  }
+
+  @media (max-width: 599px) {
+    nav {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    label {
+      display: flex;
+    }
+    ul {
+      flex: 0 1 100%;
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      top: 49px;
+      background: #fff;
+      z-index: 5000;
+    }
+    ul a {
+      padding: 15px 0;
+      margin-right: 0;
+      width: 100%;
+      text-align: center;
+    }
+    :checked ~ ul {
+      display: flex;
+    }
+  }
+}

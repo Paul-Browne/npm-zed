@@ -1,11 +1,13 @@
 {
   "name": "zedjs",
-  "version": "3.1.1",
-  "description": "Zed.js is a templateless micro frontend framework. It handles the rendering, updating and state management of your html components in only 836 bytes",
+  "version": "4.0.0",
+  "description": "Zed.js is a templateless micro frontend framework. It handles the rendering, updating and state management of your html components in only 557 bytes",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "node build"
+    "test": "node build",
+    "start": "node build-and-serve",
+    "build-only": "node build-only"
   },
   "files": [
     "*",
@@ -15,7 +17,7 @@
     "!/.git",
     "!.gitignore",
     "!/public"
-  ],  
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Paul-Browne/npm-zed.git"

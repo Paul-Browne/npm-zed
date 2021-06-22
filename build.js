@@ -1,5 +1,6 @@
 const wbp = require("web-build-process");
 
 wbp({
-	source: "test"
+	source: "test",
+	dist: "test-public"
 });

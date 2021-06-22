@@ -5,6 +5,9 @@ zed.js.org npm package
 
 ### Updates
 
+#### 4.0.0
+total rewrite, documentation to follow...
+
 #### 3.1.0
 Adds standalone
 

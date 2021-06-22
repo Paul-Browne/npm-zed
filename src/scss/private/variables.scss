@@ -1,0 +1,39 @@
+// colors
+$mainTextColor: #202020;
+
+$colorGray: #edeff5;
+$colorGrayDark: #d6d9df;
+$colorGrayLight: #f8f8f9;
+
+$colorBlue: #557a8b;
+
+$buttonPrimary: $colorBlue;
+$buttonPrimaryHover: #70cb1a;
+
+// fonts
+$fontPrimary: HelveticaNeue, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+  Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, sans-serif;
+
+// units
+@function unit($x) {
+  @return 8 * $x * 1px;
+}
+
+@mixin leftMargin {
+  padding-left: unit(2);
+  @media (min-width: 1202px) {
+    padding-left: calc(50vw - 1170px / 2);
+  }
+}
+
+@mixin rightMargin {
+  padding-right: unit(2);
+  @media (min-width: 1202px) {
+    padding-right: calc(50vw - 1170px / 2);
+  }
+}
+
+@mixin container {
+  @include leftMargin;
+  @include rightMargin;
+}
