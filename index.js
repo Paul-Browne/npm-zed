@@ -1,4 +1,4 @@
-export default function(obj){
+export default function Z(obj){
   Z[obj.id] = obj;
 }
 
