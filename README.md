@@ -18,3 +18,5 @@ Adds local check for load method
 #### TODO
 
 1. Prerendering
+2. DOM Diffing engine
+3. Routing

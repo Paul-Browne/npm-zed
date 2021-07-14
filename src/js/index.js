@@ -39,9 +39,11 @@ frameworks.forEach((name) => {
   requests.push({
     url: "https://api.npms.io/v2/package/" + name,
     local: function () {
+      console.log("ran local");
       return queryLocalstoreById(this.url);
     },
     callback: function (res) {
+      console.log("ran callback");
       localStorage.setItem(this.url, res);
       return JSON.parse(res);
     },
